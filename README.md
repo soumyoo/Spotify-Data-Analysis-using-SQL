@@ -1,6 +1,4 @@
-# Spotify Advanced SQL Project and Query Optimization P-6
-Project Category: Advanced
-[Click Here to get Dataset](https://www.kaggle.com/datasets/sanjanchaudhari/spotify-dataset)
+# Spotify SQL Project and Query Optimization
 
 ![Spotify Logo](https://github.com/Soumyoo/Spotify-Data-Analysis-using-SQL/blob/main/spotify_logo.jpg)
 
@@ -173,3 +171,4 @@ If you would like to contribute to this project, feel free to fork the repositor
 
 ```bash
 git clone https://github.com/soumyoo/Spotify-Data-Analysis-using-SQL.git
+```
