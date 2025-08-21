@@ -167,7 +167,7 @@ This optimization shows how indexing can drastically reduce query time, improvin
 ---
 
 ## Contributing
-If you would like to contribute to this project, feel free to fork the repository, submit pull requests, or raise issues.
+If you would like to contribute to this project.
 
 ```bash
 git clone https://github.com/soumyoo/Spotify-Data-Analysis-using-SQL.git
