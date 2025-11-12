@@ -46,6 +46,12 @@ Before diving into SQL, it’s important to understand the dataset thoroughly. T
 - `Album_type`: The type of album (e.g., single or album).
 - Various metrics such as `danceability`, `energy`, `loudness`, `tempo`, and more.
 
+### EDA (Exploratory Data Analysis)
+```sql
+-- After importing the CSV file in the table
+DELETE FROM spotify WHERE duration_min='0';
+```
+
 ### 4. Querying the Data
 After the data is inserted, various SQL queries can be written to explore and analyze the data. Queries are categorized into **easy**, **medium**, and **advanced** levels to help progressively develop SQL proficiency.
 
@@ -68,14 +74,32 @@ In advanced stages, the focus shifts to improving query performance. Some optimi
 ## 15 Practice Questions
 
 ### Easy Level
+
 1. Retrieve the names of all tracks that have more than 1 billion streams.
 ```sql
 SELECT track FROM spotify WHERE stream>1000000000;
 ```
 2. List all albums along with their respective artists.
+```sql
+SELECT DISTINCT album,artist FROM spotify ORDER BY 1;
+```
 3. Get the total number of comments for tracks where `licensed = TRUE`.
+```sql
+SELECT SUM(comments) FROM spotify WHERE licensed = 'true';
+```
 4. Find all tracks that belong to the album type `single`.
+```sql
+SELECT track FROM spotify WHERE album_type='single';
+```
 5. Count the total number of tracks by each artist.
+```sql
+SELECT
+	artist,
+	COUNT(track) as total_num_tracks
+FROM spotify
+GROUP BY artist
+ORDER BY 2;
+```
 
 ### Medium Level
 1. Calculate the average danceability of tracks in each album.
