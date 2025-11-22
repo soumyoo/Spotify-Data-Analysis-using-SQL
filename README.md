@@ -142,6 +142,17 @@ GROUP BY 1,2
 ORDER BY 3 DESC;
 ```
 5. Retrieve the track names that have been streamed on Spotify more than YouTube.
+```sql
+SELECT
+    track
+FROM spotify
+GROUP BY
+    track
+HAVING
+    SUM(CASE WHEN most_played_on = 'Spotify' THEN stream ELSE 0 END)
+    >
+    SUM(CASE WHEN most_played_on = 'Youtube' THEN stream ELSE 0 END);
+```
 
 ### Advanced Level
 1. Find the top 3 most-viewed tracks for each artist using window functions.
